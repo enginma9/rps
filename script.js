@@ -1,5 +1,79 @@
-/*window.onload = game();*/
 
+let i = 0;
+let text = 'Hands of Destiny';
+let speed = 75;
+let title = "";
+const ROCK = 0;
+const PAPER = 1;
+const SCISSORS = 2;
+const ONE = 'I';
+const TWO = 'II';
+const THREE = 'III';
+const FOUR = 'IV';
+const FIVE = 'V';
+
+function playRound(player, computer){
+  if(player == ROCK){
+    if(computer == ROCK){return 0};
+    if(computer == PAPER){return -1};
+    if(computer == SCISSORS){return 1};
+  }else if(player == PAPER){
+    if(computer == ROCK){return 1};
+    if(computer == PAPER){return 0};
+    if(computer == SCISSORS){return -1};
+  }else if(player == SCISSORS){
+    if(computer == ROCK){return -1};
+    if(computer == PAPER){return 1};
+    if(computer == SCISSORS){return 0};
+  };
+};
+
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+  e.target.classList.remove('playing');
+}
+
+const keys = Array.from(document.querySelectorAll('.key'));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+
+
+function wins(which){
+  document.getElementById(which).classList.add('playing');
+}
+
+function type() {
+  if ( i < text.length ) {
+    title = title.concat(text[i]);
+    document.getElementById("title").innerText = title;
+    i++;
+    setTimeout(type, speed);
+  }
+}
+
+window.onload = type();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function playRound(player, computer) {
   player = player.toUpperCase();
   computer = computer.toUpperCase();
@@ -28,10 +102,6 @@ function computerPlay(){
   else{ return "SCISSORS"; }
 }
 
-
-
-
-
 function game(){
   let playerSelection = "ROCK";
   let wins = 0;
@@ -57,3 +127,4 @@ function game(){
     }
   }
 }
+*/
