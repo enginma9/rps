@@ -58,12 +58,13 @@ function removeTransition(e) {
 }
 
 function removeBodyTransition(){
-  body.className = "";
+  document.body.className = "";
 }
 
 /* addBodyTransition('redslash') */
 function addBodyTransition(classText){
-  body.classList.add(classText)
+  console.log(classText)
+  document.body.classList.add(classText)
   setTimeout(removeBodyTransition, 500)
 }
 
@@ -87,6 +88,7 @@ function lose(){
   document.getElementById("status_2").innerText = "Try!";
   computer_wins++;
   document.getElementById("computer_wins").innerText = translateWins(computer_wins);
+  addBodyTransition('redslash');
 }
 
 function win(){
@@ -96,6 +98,7 @@ function win(){
   document.getElementById("status_2").innerText = "Job!";
   me_wins++;
   document.getElementById("me_wins").innerText = translateWins(me_wins);
+  addBodyTransition('whiteslash');
 }
 
 function tie(){

@@ -111,7 +111,7 @@ button{
 }
 
 .whiteslash{
-  ckground: linear-gradient(to bottom right, #204, rgb(100,100,100), #204);
+  background: linear-gradient(to bottom right, #204, #555, #204);
 }
 
 .off{
