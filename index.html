@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="style.css">
   <title>ROK PPR SZR</title>
 </head>
-<body>
+<body class="">
   <div id="title"></div>
   <div class="big">
     <div class="h container">
-      <div id="" class="results holder v container">
+      <div id="me" class="results holder v container">
         <div id="me_sign">
            &#9995;
         </div>
@@ -18,7 +18,7 @@
           Me: <span id="me_wins"><span>
         </div>
       </div>
-      <div id="" class="results holder v container">
+      <div id="computer" class="results holder v container">
         <div id="computer_sign">
           &#9995;
         </div>
@@ -28,14 +28,15 @@
       </div>
     </div>
     <div class="v container">
-      <span>You</span>
+      <span id="status_1">It's</span>
 
-      <span>Win!</span>
+      <span id="status_2">Time!</span>
+      <button id="reset_button">Play?</button>
     </div>
     <div class="h container">
-      <button id="button1" class="ROCK holder"> &#9994; <span class="explain"><br>(ROCK)</span> </button>
-      <button id="button2" class="PAPER holder"> &#9995; <span class="explain"><br>(PAPER)</span> </button>
-      <button id="button3" class="SCISSORS holder"> &#9996; <span class="explain"><br>(SCISSORS)</span> </button>
+      <button id="button1" class="ROCK holder" onclick=""> &#9994; <span class="explain"><br>(ROCK)</span> </button>
+      <button id="button2" class="PAPER holder" onclick=""> &#9995; <span class="explain"><br>(PAPER)</span> </button>
+      <button id="button3" class="SCISSORS holder" onclick=""> &#9996; <span class="explain"><br>(SCISSORS)</span> </button>
     </div>
   </div>
   <div id="bottom" class="bottom">
@@ -44,10 +45,3 @@
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
-
-
-<!--  <div class="">
-    <button id="fixed4" class="ROCK">ROCK</button>
-    <button id="fixed5" class="PAPER">PAPER</button>
-    <button id="fixed6" class="SCISSORS">SCISSORS</button>
-  </div> -->

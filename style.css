@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body{
-  background: #204;
+  background: linear-gradient(to bottom right, #204, rgb(30,10,30), #204);
   height: 100vh;
   margin:0;
   padding:0;
   font-family: Roboto, sans-serif;
   font-weight: bold;
   color: white;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+
 }
 
 p{
@@ -46,14 +49,13 @@ button{
   border-radius: 1vw;
   background: black;
   color: white;
-  height: 20vh;
-  width: 20vh;
+  height: 25vh;
+  width: 25vh;
   margin: 10px;
   font-size: 6vh;
   font-weight: bold;
   text-align: center;
-  max-height: 20vh;
-  max-width: 20vh;
+  transition: 0.1s;
 }
 
 .big{
@@ -96,4 +98,22 @@ button{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.bounce{
+  transform: scale(1.1);
+  border-color: hsl(300, 100%, 15%);
+  box-shadow: 0 0 10px #ffc600;
+}
+
+.redslash{
+  background: linear-gradient(to bottom right, #204, rgb(100,0,0), #204);
+}
+
+.whiteslash{
+  ckground: linear-gradient(to bottom right, #204, rgb(100,100,100), #204);
+}
+
+.off{
+  border: 2px solid black;
 }
